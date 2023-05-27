@@ -48,6 +48,12 @@ resource "azurerm_subnet_network_security_group_association" "asg" {
     depends_on = [ azurerm_network_security_group.nsg, azurerm_subnet.sub_git ]
   
 }
+resource "azurerm_subnet_network_security_group_association" "asg2" {
+    subnet_id = azurerm_subnet.sub2_git.id
+    network_security_group_id = azurerm_network_security_group.nsg.id
+    depends_on = [ azurerm_network_security_group.nsg, azurerm_subnet.sub2_git ]
+  
+}
 #create public IP
 resource "azurerm_public_ip" "pip" {
     name = "pip"
