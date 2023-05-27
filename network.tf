@@ -34,6 +34,13 @@ resource "azurerm_subnet" "sub_git" {
     address_prefixes = [lookup(var.address_space,2)]
 }
 
+resource "azurerm_subnet" "sub2_git" {
+    name = "sub2_git" 
+    virtual_network_name = azurerm_virtual_network.cmt-git.name
+    resource_group_name = var.resource_group_name
+    address_prefixes = [lookup(var.address_space,3)]
+}
+
 #associate security group
 resource "azurerm_subnet_network_security_group_association" "asg" {
     subnet_id = azurerm_subnet.sub_git.id
