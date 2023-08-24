@@ -9,8 +9,7 @@ variable "location_name" {
 
 locals {
   tag = {
-    email = "nibin.bahulayansheena@ncs.com.sg"
-    Project = "HPB"
+    email = "sheena_nibin_bahulayan@tech.gov.sg"
     Environment = "Dev"
   }
 }
