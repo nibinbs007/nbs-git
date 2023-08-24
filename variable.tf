@@ -1,6 +1,6 @@
 #calling in existing resource group name
 variable "resource_group_name" {
-  default = "RG-EDMS-IPL-Cloud-HPB"
+  default = "cmt-git"
 }
 
 variable "location_name" {
