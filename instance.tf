@@ -33,23 +33,5 @@ resource "azurerm_virtual_machine" "git-vm" {
     provision_vm_agent        = true
   }
 
-  /*connection {
-    type     = "winrm"
-    user     = "adminuser"
-    password = "password1234!"
-    host     = azurerm_public_ip.pip.ip_address
-  }
-
-  provisioner "file" {
-    source      = "install-git.ps1"
-    destination = "C:/install-git.ps1"
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "powershell.exe -ExecutionPolicy Unrestricted -File C:/install-git.ps1"
-    ]
-  }*/
-
   tags = local.tag
 }
